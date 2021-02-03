@@ -1,0 +1,151 @@
+body
+{
+    background-image: linear-gradient(to right, rgb(101, 184, 76), rgb(254, 255, 176));
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.selectForm
+{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button
+{
+    padding: 0.5rem;   
+    border: none;
+    background: rgb(255, 255, 255);
+    
+}
+form input
+{
+    color: rgb(28, 182, 74);
+    font-size: 2rem;
+}
+
+form button
+{
+    color:rgb(28, 182, 74);
+    cursor: pointer;
+    transition: all 0.35s ease;
+    background: white
+}
+
+.tdButton
+{
+    font-size: 2rem;
+}
+
+form button:hover 
+{
+    background: rgb(43, 223, 97);
+    color: whitesmoke;
+}
+
+select
+{
+    appearance: none;
+    outline: none;
+    border: none;
+}
+select
+{
+    border: 1rem;
+    color: rgb(28, 182, 74);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    
+}
+
+.fa-check, .fa-trash
+{   
+    cursor: pointer;
+    align-content: center;
+    border: none;
+    padding: .3rem;
+    float: right;
+    
+}
+
+
+.fa-trash
+{
+    color:rgb(231, 48, 48);
+    cursor: pointer;
+    transition: all 0.35s ease;
+    /* background: rgb(231, 48, 48); */
+}
+.fa-trash:hover 
+{
+    background: rgb(231, 48, 48);
+    color: rgb(255, 255, 255);
+}
+
+.fa-check
+{
+    color:rgb(43, 223, 97);
+    cursor: pointer;
+    transition: all 0.35s ease;
+    /* background:  rgb(28, 182, 74); */
+}
+.fa-check:hover 
+{
+    background: rgb(43, 223, 97);
+    color: rgb(255, 255, 255);
+}
+
+
+.tdList
+{   
+    padding-left: .5rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: rgb(28, 182, 74);
+    display: inline-block;
+    background-color: rgb(253, 253, 253);
+    width: 580px;
+    text-align: left;
+}
+.tdone
+{
+    padding-left: .5rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    color: rgb(28, 182, 74);
+    display: inline-block;
+    background-color: rgb(253, 253, 253);
+    width: 550px;
+    text-align: left;
+    opacity: 60%;
+    text-decoration: line-through;
+}
+
+
+/*.icons
+{
+    float: right;
+}*/
+
+.taskName
+{   
+    color: rgb(28, 182, 74);
+    border: 0;
+    margin: 0;
+}
+
+.checkButtons
+{
+    min-height: 8vh;
+}

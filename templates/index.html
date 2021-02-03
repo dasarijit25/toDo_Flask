@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+            crossorigin="anonymous" 
+        />
+        <link rel = "stylesheet"  href = "static/style.css">
+    </head>
+    <body>
+        <br><br><br><br>
+        <h1>TASKS TO BE DONE</h1>     
+        <div class="func">       
+            <form action="/task" method="post" class="selectForm">
+                <input type="text" class="tdInput" name="content" required> 
+                <button type="submit" class="tdButton" >
+                    <i class="fas fa-plus-square"></i>
+                </button>
+                
+            </form>
+            
+            <form action="/filter" method="post" class="checkButtons">
+                Filters:&emsp;                
+                <button type="submit" name="submit_button" value="all">All</button>
+                <button type="submit" name="submit_button" value="done">Completed</button>
+                <button type="submit" name="submit_button" value="remaining">Remaining</button>
+                
+            </form>
+            
+        </div>  
+        <div class = "tdContainer">
+            <div class = "helper">
+            {% for task in tasks %}			
+                <ol>
+				
+                    {% if task.done %} 					
+                    <li class="tdone">                                                                        
+						 
+                    {% else %}					
+                    <li class="tdList"> 
+					
+					{% endif %}
+                            
+					{{ task.content }}                                            
+                        <a href="/delete/{{ task.id }}"><i class = "fas fa-trash"></i></a>
+                        <a href="/done/{{ task.id }}"><i class = "fas fa-check"></i></a>
+                    </li>
+                </ol>
+            {% endfor %}  
+            </div>
+        </div>        
+    </body>
+</html>
